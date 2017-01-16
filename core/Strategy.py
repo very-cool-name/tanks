@@ -27,3 +27,9 @@ class Strategy(ABC):
     def move(self, game: Game, world: World, player: Player, tank: Tank, move: Move):
         """Core method of strategy. Should fill move to appropriate state."""
         pass
+
+        
+class DummyStrategy(ABC):
+    """Strategy, that does nothing"""
+    def move(self, game: Game, world: World, player: Player, tank: Tank, move: Move):
+        move.action = Move.NONE

@@ -1,0 +1,5 @@
+{
+  "players": ["DUMMY", "DUMMY", "NETWORK"],
+  "round_ticks": 1000,
+  "strategy_timeout": 120
+}

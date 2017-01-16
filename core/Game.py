@@ -7,3 +7,4 @@ class Game(object):
 
     def __init__(self):
         self.tick = 0
+        self.state = Game.NOT_STARTED

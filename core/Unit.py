@@ -32,12 +32,12 @@ class Shell(MovingUnit):
         self.player_id = player_id
 
 
-class Tank(MovingUnit, LivingUnit):
+class Tank(MovingUnit):
     """Tank. Moves, has 1 hp and has player_id"""
     HP = 1
     MAX_V = 1
 
     def __init__(self, x, y, vx, vy, player_id):
-        MovingUnit.__init__(x, y, vx, vy)
-        LivingUnit.__init__(x, y, Tank.HP)
+        MovingUnit.__init__(self, x, y, vx, vy)
         self.player_id = player_id
+        self.hp = Tank.HP
