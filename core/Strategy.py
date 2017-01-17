@@ -4,6 +4,7 @@ from core.Game import Game
 from core.World import World
 from core.Unit import Tank
 from core.Player import Player
+from core.Utility import object_from_dict
 
 
 class Move(object):
@@ -20,6 +21,11 @@ class Move(object):
         self.action = Move.NONE
         self.vx = 0
         self.vy = 0
+
+    @staticmethod
+    def from_dict(settings):
+        game = Game()
+        return object_from_dict(game, settings)
 
 
 class Strategy(ABC):

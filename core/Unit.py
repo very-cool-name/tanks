@@ -2,6 +2,8 @@
 LivingUnit and player_id should really be properties, with appropriate visitors.
 """
 
+from core.Utility import object_from_dict
+
 
 class Unit(object):
     """Something placed in the world"""
@@ -41,3 +43,8 @@ class Tank(MovingUnit):
         MovingUnit.__init__(self, x, y, vx, vy)
         self.player_id = player_id
         self.hp = Tank.HP
+
+    @staticmethod
+    def from_dict(settings):
+        tank = Tank(None, None, None, None, None)
+        return object_from_dict(tank, settings)

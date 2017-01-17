@@ -12,6 +12,7 @@ from core.Player import Player
 
 from simulator.StrategySend import StrategySend
 
+
 class Settings(object):
     """Settings of launch, loaded from json file."""
     class StrategyType(object):
